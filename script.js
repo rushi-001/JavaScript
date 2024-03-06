@@ -19,3 +19,25 @@
 // }
 // const sum = sumOfNum(10, 20, 30, 40, 50); // > 10, 20, 30, 40, 50 are taken by the function
 // console.log(sum);
+
+// >> this keyword in normal funciton 
+// > an object
+const obj = {
+    value: 10,
+    myf: function(){
+        
+    }
+}
+
+// >> arrow function
+// > for n number of arguments.
+// > use "..." and any name you want for n numbers of arguments like "...num".
+const sum = (...num) => {
+    let ans = 0;
+    for (i = 0; i < num.length; i++) {
+        ans = ans + num[i];
+    }
+    return ans;
+};
+
+console.log(sum(5, 10, 20, 50));

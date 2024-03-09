@@ -97,6 +97,31 @@
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+// >> Arrays
 
+// const myArray = ["new1", 1, true, "👍"];
+// console.log(myArray);
+
+// myArray.reverse();
+// console.log(myArray);
+
+// console.log(myArray.length);
+
+// myArray.push("raj");
+// console.log(myArray);
+
+// myArray.pop("raj");
+// myArray.pop(myArray[4]);
+// console.log(myArray);
+
+// myArray[0] = "ram";
+// console.log(myArray);
+
+// console.log(myArray.indexOf("ram"));
+
+// myArray.push({ name: "raj", age: "20" })
+// console.log(myArray);
+
+// >> High order arrays
 
 

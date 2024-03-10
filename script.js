@@ -122,6 +122,28 @@
 // myArray.push({ name: "raj", age: "20" })
 // console.log(myArray);
 
+// ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 // >> High order arrays
 
+// const myArray = ["new1", 1, true, "👍"];
+// const num = [1, 2, 3, 4, 5];
+
+// > .forEach
+// function print(val) {
+//     console.log(val);
+// }
+
+// myArray.forEach(print); // > its like applying funciton on each element like loop.
+
+// myArray.forEach((val) => { console.log(val) }); // > also write like this
+
+// let newArray = num.forEach((val) => { return val * 2 }); // > for each does not give return value so its can not store the value like this
+
+// > .map
+// let newArray = num.map((val) => { return val * 2 }); // > map wrok like forEach funciton but its gives return value
+
+// console.log(newArray);
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

@@ -147,3 +147,14 @@
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+// >> DOM > Document Object Model
+
+// > console.log() is actually window.console.log()
+
+// > Document
+
+// console.log(document); // > it gives all your index.html code in console
+
+// console.log(document.title); // > like this you can print elemant from html file
+// document.title = "JS";
+// console.log(document.title);

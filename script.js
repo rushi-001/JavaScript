@@ -1,9 +1,9 @@
-// >> Test
+//* >> Test
 // document.write("Hello web from js.");
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-// >> Ternary operater
+//* >> Ternary operater
 // const age = 18;
 // const candition = age >= 18 ? "yes" : "no";
 // > if else candition when there is only one candition after ? if candition and after : else candition
@@ -11,7 +11,7 @@
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-// >> function > arguments
+//* >> function > arguments
 // function sumOfNum() {
 //     console.log(arguments); // > this gives all args which gives in funciton calling
 //     console.log(arguments[0]);
@@ -26,7 +26,7 @@
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-// >> arrow function
+//* >> arrow function
 // > for n number of arguments.
 // > use "..." and any name you want for n numbers of arguments like "...num".
 // const sum = (...num) => {
@@ -41,7 +41,7 @@
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-// >> this keyword in arrow funciton
+//* >> this keyword in arrow funciton
 // > an object
 // const value = 10;
 
@@ -57,7 +57,7 @@
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-// >> this keyword in normal funciton
+//* >> this keyword in normal funciton
 // > an object
 // const obj = {
 //     valuse: 10,
@@ -70,7 +70,7 @@
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-// >> High order function & Callback (use for log process or hive tasks)
+//* >> High order function & Callback (use for log process or hive tasks)
 // > High order funciton which means the function calls function as parameters
 // function add(a, b, callBack) {
 //     let result = a + b;
@@ -83,7 +83,7 @@
 //     console.log(val);
 // })
 
-// // > you can also do like this for an example
+// > you can also do like this for an example
 // function adding(a, b, callBack) {
 //     let result = a + b;
 //     callBack(result);
@@ -97,8 +97,7 @@
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-// >> Arrays
-
+//* >> Arrays
 // const myArray = ["new1", 1, true, "👍"];
 // console.log(myArray);
 
@@ -124,8 +123,7 @@
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-// >> High order arrays
-
+//* >> High order arrays
 // const myArray = ["new1", 1, true, "👍"];
 // const num = [1, 2, 3, 4, 5];
 
@@ -147,8 +145,7 @@
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-// >> DOM > Document Object Model
-
+//* >> DOM > Document Object Model
 // > console.log() is actually window.console.log()
 
 // > Document
@@ -158,3 +155,14 @@
 // console.log(document.title); // > like this you can print elemant from html file
 // document.title = "JS";
 // console.log(document.title);
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//* >> deleting the elements with same class names
+// const elements = document.getElementsByClassName("hello0");
+
+// const elementsArray = Array.from(elements); // > convert into Array
+
+// elementsArray.forEach(function (e) { // > runing foreach for every elemnt to remove
+//     e.parentNode.removeChild(e);
+// });

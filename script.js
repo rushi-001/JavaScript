@@ -191,3 +191,15 @@
 // })
 
 // console.log(document.querySelector("body").children);
+
+//* >> creating new element with JS
+// const btnHello = document.getElementById("btnHello");
+// const newElements = document.getElementById("new-Elements");
+
+// btnHello.addEventListener("click", () => {
+//     let el = document.createElement('h1');
+
+//     el.innerText = "RUSHI PANCHAL";
+
+//     newElements.appendChild(el);
+// })

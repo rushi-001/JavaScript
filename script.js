@@ -166,3 +166,28 @@
 // elementsArray.forEach(function (e) { // > runing foreach for every elemnt to remove
 //     e.parentNode.removeChild(e);
 // });
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//* >> preferred way for adding event listeners
+// > if any other click event applied on same btn then both event will run
+// const btnHello = document.getElementById("btnHello");
+// const txtHello1 = document.getElementById("hello1");
+// const txtHello2 = document.getElementById("hello2");
+// const txtHello0 = document.getElementsByClassName("hello0");
+
+// btnHello.addEventListener("click", () => {
+//     // > because get element by class name returns collection of elements
+//     for (let i = 0; i < txtHello0.length; i++) {
+//         txtHello0[i].classList.add('bg-red');
+//     }
+//     // > id is unique it returns single element
+//     txtHello1.classList.add("bg-blue");
+//     txtHello2.classList.add("bg-blue");
+// })
+
+// txtHello1.addEventListener("click", () => {
+//     txtHello1.remove();
+// })
+
+// console.log(document.querySelector("body").children);

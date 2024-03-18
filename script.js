@@ -97,6 +97,18 @@
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+//* >> Listing the High order functions
+// > forEach(): Iterates over each element in the array and executes a callback function for each element. [> array.forEach((el) => { "--task--" });]
+// > map(): Creates a new array with the results of calling a provided function on every element in the array.
+// > filter(): Creates a new array with elements that pass the test implemented by the provided function.
+// > reduce(): Executes a reducer function on each element of the array, resulting in a single output value.
+// > find(): Returns the first element in the array that satisfies the provided testing function.
+// > some(): Checks if at least one element in the array passes the test implemented by the provided function.
+// > every(): Checks if all elements in the array pass the test implemented by the provided function.
+
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 //* >> Arrays
 // const myArray = ["new1", 1, true, "👍"];
 // console.log(myArray);
@@ -203,3 +215,4 @@
 
 //     newElements.appendChild(el);
 // })
+

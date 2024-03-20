@@ -246,12 +246,14 @@
 // async function getData() {
 //     let APIoutput = await fetch("https://api.publicapis.org/entries");
 //     console.log(APIoutput);
+//     console.log(APIoutput.json);
 // }
 // getData();
 // console.log(a + b); //* > sum perform first and when data arrives it prints
 
-//* > `async`: what this keyword do is it tells the computer that its async task
-//* > `await`: you can only use this keyword in async tasks, what this keyword do is it did not wait for the data to fatch it exicute the next code and give data when it errives
+//* > `async`: what this keyword do is it tells the computer that its async task and did not wait for the task to parform
+//* > `await`: its important, you can only use this keyword in async tasks, what this keyword do is it tells that this is the task which you did not to wait
 
 //? ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+//* >>> to add variables in URL or similar you can use "`--URL OR String--`" and in the place of variable use ${--variable--} 

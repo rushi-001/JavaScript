@@ -256,24 +256,55 @@
 
 //? ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-//* >>> to add variables in URL or similar you can use "`--URL OR String--`" and in the place of variable use ${--variable--}
+//* >>> string interpolation
+//* > to add variables in URL or similar you can use "`--URL OR String--`" and in the place of variable use ${--variable--}
 
 //? ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 //* >>> local storage
 
-const btn = document.getElementById("btnHello");
-const input = document.getElementById("input-data");
-const userName = document.getElementById("user-name");
+// const btn = document.getElementById("btnHello");
+// const input = document.getElementById("input-data");
+// const userName = document.getElementById("user-name");
 
-btn.addEventListener("click", () => {
-    let data = input.value;
-    localStorage.setItem("name", data);
-    //* first in setItem add --key-- which is important for geting data from local storage and then --data--
-    location.reload(); // location mean your current page or URL
-})
+// btn.addEventListener("click", () => {
+//     let data = input.value;
+//     localStorage.setItem("name", data);
+//     //* first in setItem add --key-- which is important for geting data from local storage and then --data--
+//     location.reload(); // location mean your current page or URL
+// })
 
-window.addEventListener("load", () => {
-    data = window.localStorage.getItem('name'); // geting data form --key-- value which is --name--
-    userName.innerText = data;
-})
+// window.addEventListener("load", () => {
+//     data = window.localStorage.getItem('name'); // geting data form --key-- value which is --name--
+//     userName.innerText = data;
+// })
+
+//? ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//* >>> users corent location fecthing
+
+// const btn = document.getElementById("btnHello");
+
+// btn.addEventListener("click", () => {
+//     navigator.geolocation.getCurrentPosition((loc) => console.log(loc), () => console.log("error"))
+// })
+
+//* > there is an --navigator-- built in function which gives us location of the user
+
+//? ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//* >>> Clock / setTimeout / setInterval
+
+// const btn = document.getElementById("btnHello");
+
+// const clock = () => {
+//     let time = new Date();
+//     let newTime = `${time.getHours()}: ${time.getMinutes()}: ${time.getSeconds()}`;
+//     document.getElementById("time").innerText = newTime;
+// }
+// clock();
+// // setTimeout(clock, 1000); //* > it runs only ones
+// setInterval(clock, 1000); //* > it runs in every 1 secancd
+
+//? ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+

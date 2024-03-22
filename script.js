@@ -307,4 +307,48 @@
 // setInterval(clock, 1000); //* > it runs in every 1 secancd
 
 //? ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//? ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//? ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+//* >>> Closures
+
+//* > this is an simple example of closures (NOTE: its like componnets in React.JS)
+// function fun() {
+//     const name = "raj";
+
+//     function myName2() {
+//         console.log(name);
+//     }
+
+//     return myName2;
+// }
+
+// fun();
+
+//* > Ex. 2
+
+// const btnSize10 = document.getElementById("btn-size-10")
+// const btnSize20 = document.getElementById("btn-size-20")
+// const btnSize30 = document.getElementById("btn-size-30")
+// const btnSize60 = document.getElementById("btn-size-60")
+// const txt = document.getElementById("title")
+
+// function reSize(size) {
+//     let setSize = () => {
+//         txt.style.fontSize = `${size}px`
+//     }
+//     return setSize;
+// }
+
+// const size10 = reSize(10);
+// const size20 = reSize(20);
+// const size30 = reSize(30);
+// const size60 = reSize(60);
+
+// btnSize10.addEventListener("click", size10)
+
+// btnSize20.addEventListener("click", size20)
+
+// btnSize30.addEventListener("click", size30)
+
+// btnSize60.addEventListener("click", size60)

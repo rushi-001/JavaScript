@@ -352,3 +352,47 @@
 // btnSize30.addEventListener("click", size30)
 
 // btnSize60.addEventListener("click", size60)
+
+//? ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//* >>> currying
+
+//* > simple example of currying
+
+// function add(a) {
+//     return function (b) {
+//         return function (c) {
+//             console.log(a + b + c);
+//         }
+//     }
+// }
+
+// add(2)(3)(4);
+
+//* > in advance version of coding we write this as
+
+// const add = (a) => (b) => (c) => console.log(a + b + c);
+
+// add(2)(3)(4);
+
+//* > other Ex.
+
+// function myMail(to) {
+//     return function (subject) {
+//         return function (body) {
+//             return console.log(`This email is for ${to} regarding about ${subject}: So, ${body}`);
+//         }
+//     }
+// }
+
+// let dev1 = myMail("rushi0@gmail.com");
+// let dev2 = dev1("Keyboard");
+// dev2("Hy your new keyboard is ready when are you going to pickup");
+
+//* > in advance version of coding we write this as
+
+// const myMail = (to) => (subject) => (body) => console.log(`This email is for ${to} regarding about ${subject}: So, ${body}`);
+
+// let dev1 = myMail("rushi0@gmail.com");
+// let dev2 = dev1("Keyboard");
+// dev2("Hy your new keyboard is ready when are you going to pickup");

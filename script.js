@@ -396,3 +396,76 @@
 // let dev1 = myMail("rushi0@gmail.com");
 // let dev2 = dev1("Keyboard");
 // dev2("Hy your new keyboard is ready when are you going to pickup");
+
+//? ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//* >>> Composition
+//* > if there are number of tasks and that performs one after another in that case you can use this method
+
+//* > Like as an example
+
+// const add = (a, b) => {
+//     return a + b;
+// }
+// const square = (val) => {
+//     return val * val;
+// }
+
+// const newFun = (a, b) => {
+//     return square(add(a, b))
+// }
+
+// console.log(newFun(2, 1))
+
+//* > but in real life you have multiple function which can not be write or maintain like this so then you can use this composition
+
+//* > Example for composition function
+
+// const add = (a, b) => {
+//     return a + b;
+// }
+// const square = (val) => {
+//     return val * val;
+// }
+// const mult = (a, b) => {
+//     return a * b;
+// }
+
+// const compoFun = (fun1, fun2) => {
+//     return (a, b) => {
+//         return fun2(fun1(a, b));
+//     }
+// }
+
+//* > in modern way
+// const compoFunModern = (fun1, fun2) => (a, b) => fun2(fun1(a, b));
+
+// const task = compoFun(add, square);
+// const task2 = compoFunModern(mult, square);
+
+// console.log(task(2, 1));
+// console.log(task2(2, 1));
+
+//* > what if you dont know how many function you need to compose in that case
+
+//* > values are taking inputs as array
+// const add = (args) => {
+//     return args[0] + args[1];
+// }
+// const square = (val) => {
+//     return val * val;
+// }
+// const mult = (a, b) => {
+//     return a * b;
+// }
+
+// const composition = (...funs) => {
+//     return (...value) => {
+//         return funs.reduce((a, b) => b(a), value);
+//         //* > IMPORTANT `funs.reduce((a, b) => {--code--})` this will tack first two functions similarly you can tack first three, etc...
+//         //* > values are taking inputs as array
+//     }
+// }
+
+// const task = composition(add, square)
+// console.log(task(1, 2))

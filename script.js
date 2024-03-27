@@ -303,7 +303,7 @@
 //     document.getElementById("time").innerText = newTime;
 // }
 // clock();
-// // setTimeout(clock, 1000); //* > it runs only ones
+// setTimeout(clock, 1000); //* > it runs only ones
 // setInterval(clock, 1000); //* > it runs in every 1 secancd
 
 //? ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -469,3 +469,4 @@
 
 // const task = composition(add, square)
 // console.log(task(1, 2))
+

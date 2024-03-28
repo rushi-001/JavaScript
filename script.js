@@ -353,6 +353,25 @@
 
 // btnSize60.addEventListener("click", size60)
 
+//* >> Important Ex.3
+
+const atm = function (initalBalance) {
+    let balence = initalBalance;
+    function withdraw(amt) {
+        if (amt > balence) {
+            return "ha ha ha ha poor man";
+        } else {
+            balence -= amt;
+            return balence
+        }
+    }
+    return { withdraw }; //* > if we want to return function the use `{ }` for that
+}
+
+const Rushi = atm(10000000000);
+console.log(Rushi.withdraw(10000000000));
+console.log(Rushi.withdraw(10000000000));
+
 //? ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 //* >>> currying
@@ -470,3 +489,20 @@
 // const task = composition(add, square)
 // console.log(task(1, 2))
 
+//? ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//* >>> IIFE (Immediately Invoked Function Expression)
+
+// (function () {
+//     console.log("its iife");
+// })();
+
+// (function (a, b) {
+//     console.log(a + b);
+// })(2, 1);
+
+// const fun = (() => console.log("hello"))();
+
+//* you can use async function with this so its better to use this
+
+// const data = (async () => await fetch(`--URL--`))();

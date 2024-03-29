@@ -355,28 +355,28 @@
 
 //* >> Important Ex.3
 
-// const atm = function (initalBalance) {
-//     let balence = initalBalance;
-//     function withdraw(amt) {
-//         if (amt > balence) {
-//             return "ha ha ha ha poor man";
-//         } else {
-//             balence -= amt;
-//             return balence
-//         }
-//     }
-//     return { withdraw }; //* > if we want to return function the use `{ }` for that
-// }
+const atm = function (initalBalance) {
+    let balence = initalBalance;
+    function withdraw(amt) {
+        if (amt > balence) {
+            return "ha ha ha ha poor man";
+        } else {
+            balence -= amt;
+            return balence
+        }
+    }
+    return { withdraw }; //* > if we want to return function the use `{ }` for that
+}
 
 //* > we cant access balence diractly because its closures or its private variable
-// console.log(Rushi);
+console.log(Rushi);
 
-// const Rushi = atm(10000000000);
-// console.log(Rushi.withdraw(100));
-// console.log(Rushi.withdraw(10000));
-// console.log(Rushi.withdraw(10454000));
-// console.log(Rushi.withdraw(10454000));
-// console.log(Rushi.withdraw(145400000000));
+const Rushi = atm(10000000000);
+console.log(Rushi.withdraw(100));
+console.log(Rushi.withdraw(10000));
+console.log(Rushi.withdraw(10454000));
+console.log(Rushi.withdraw(10454000));
+console.log(Rushi.withdraw(145400000000));
 
 //? ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -512,4 +512,14 @@
 //* you can use async function with this so its better to use this
 
 // const data = (async () => await fetch(`--URL--`))();
+
+//? ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//* >>> Iterators / Generator Function / Yield
+
+//* >> Iterators
+
+//* > provides a way to access elements sequentially within a collection or iterable object
+
+
 

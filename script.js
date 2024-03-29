@@ -355,28 +355,28 @@
 
 //* >> Important Ex.3
 
-const atm = function (initalBalance) {
-    let balence = initalBalance;
-    function withdraw(amt) {
-        if (amt > balence) {
-            return "ha ha ha ha poor man";
-        } else {
-            balence -= amt;
-            return balence
-        }
-    }
-    return { withdraw }; //* > if we want to return function the use `{ }` for that
-}
+// const atm = function (initalBalance) {
+//     let balence = initalBalance;
+//     function withdraw(amt) {
+//         if (amt > balence) {
+//             return "ha ha ha ha poor man";
+//         } else {
+//             balence -= amt;
+//             return balence
+//         }
+//     }
+//     return { withdraw }; //* > if we want to return function the use `{ }` for that
+// }
 
-//* > we cant access balence diractly because its closures or its private variable
-console.log(Rushi);
+// //* > we cant access balence diractly because its closures or its private variable
+// console.log(Rushi);
 
-const Rushi = atm(10000000000);
-console.log(Rushi.withdraw(100));
-console.log(Rushi.withdraw(10000));
-console.log(Rushi.withdraw(10454000));
-console.log(Rushi.withdraw(10454000));
-console.log(Rushi.withdraw(145400000000));
+// const Rushi = atm(10000000000);
+// console.log(Rushi.withdraw(100));
+// console.log(Rushi.withdraw(10000));
+// console.log(Rushi.withdraw(10454000));
+// console.log(Rushi.withdraw(10454000));
+// console.log(Rushi.withdraw(145400000000));
 
 //? ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -518,8 +518,61 @@ console.log(Rushi.withdraw(145400000000));
 //* >>> Iterators / Generator Function / Yield
 
 //* >> Iterators
-
 //* > provides a way to access elements sequentially within a collection or iterable object
 
+//* >> build in iterator
+
+// for (const val of [1, 2, 3, 4, 5]) {
+//     console.log(val);
+// }
+
+//* > You can create iterator but it requaire careful coding and you can not use it like build in iterators like in for loops
+//* > You can use generator function for that
+
+//* >> Yield
+//* > yield keyword is used within generator functions to pause execution and yield a value to the caller
+
+// function* count() { //* > generator function
+//     yield 1;
+//     yield 2;
+//     yield 3;
+//     yield 4;
+//     yield 5;
+// }
+
+// const num = count();
+
+// for (const n of num) {
+//     console.log(n);
+// }
+
+//* > Generator function
+
+// function* makeMyIterator(start, end, steps) {
+//     for (let i = start; i <= end; i += steps) {
+//         yield i;
+//     }
+// }
+
+// const myIterator = makeMyIterator(1, 10, 1);
+
+// for (const num of myIterator) {
+//     console.log(num);
+// }
+
+//* > Other ex.
+
+// function* makeMyIterator(start, end, steps) {
+//     for (let i = start; i <= end; i += steps) {
+//         yield i;
+//     }
+// }
+
+// const myIterator = makeMyIterator(1, 10, 1);
 
 
+// const btn = document.getElementById("my-btn")
+
+// btn.addEventListener("click", () => {
+//     btn.innerText = myIterator.next().value;
+// })

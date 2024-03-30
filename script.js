@@ -576,3 +576,61 @@
 // btn.addEventListener("click", () => {
 //     btn.innerText = myIterator.next().value;
 // })
+
+//? ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//* >>> Promisificaion
+
+//* > old school code without promisies
+
+// function loadScript(src, callBack){
+//     const script = document.createElement("script");
+//     script.src = src;
+//     script.onload = () => callBack(null, script) //* in callbacks the first argument is error
+//     script.onerror = () => callBack(new Error("error!"));
+    
+//     document.head.appendChild(script);
+// }
+
+// loadScript("test.js", (err, script) => {
+//     if(err){
+//         console.log(err);
+//     } else{
+//         console.log("script loaded");
+//     }
+// })
+
+//* > canvert function in promisies
+
+function promisify(fun){
+    return function(...args){
+        return new Promise((resolve, reject) => {
+            fun(...args, (err, result) => {
+                if(err){
+                    return reject(err);
+                }else{
+                    return resolve(result);
+                }
+            })
+        })
+    }
+}
+
+function loadScript(src, callBack){
+    const script = document.createElement("script");
+    script.src = src;
+    script.onload = () => callBack(null, script) //* in callbacks the first argument is error
+    script.onerror = () => callBack(new Error("error!"));
+    
+    document.head.appendChild(script);
+}
+
+const loadScriptNew = promisify(loadScript);
+
+(async () => {
+    try{
+        const result = await loadScriptNew("test.js");
+    }catch(error){
+        console.log(error);
+    }
+})();
